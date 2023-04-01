@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CAR SHOP</title>
+    <link rel="shortcut icon" href="Img/Shortcut.png" />
+    <link rel="stylesheet" href="/AllWebsites/BMWShopPage/style.css" />
+    <link rel="stylesheet" href="market.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+  </head>
+  <body>
+    <header class="header">
+      <a href="/AllWebsites/BMWShopPage/index.html" class="logo">
+        <h3><span>bmw </span>market</h3>
+      </a>
+      <i class="fa fa-credit-card-alt" aria-hidden="true" id="creditCard"></i>
+    </header>
+    <section class="cars" id="cars">
+      <div class="container">
+        <div class="box">
+          <img class="image" src="Img/car (1).png" alt="BMW" />
+          <h3 class="title">car №1</h3>
+          <div class="content">
+            <div class="price">
+              <span class="now-price">$55000</span>
+              <p>$65000</p>
+            </div>
+            <button>
+              <i class="fa fa-cart-plus add-btn" aria-hidden="true"></i>
+            </button>
+          </div>
+        </div>
+        <div class="box">
+          <img class="image" src="Img/car (2).png" alt="BMW" />
+          <h3 class="title">car №2</h3>
+          <div class="content">
+            <div class="price">
+              <span class="now-price">$45000</span>
+              <p>$56000</p>
+            </div>
+            <button>
+              <i class="fa fa-cart-plus add-btn" aria-hidden="true"></i>
+            </button>
+          </div>
+        </div>
+        <div class="box">
+          <img class="image" src="Img/car (3).png" alt="BMW" />
+          <h3 class="title">car №3</h3>
+          <div class="content">
+            <div class="price">
+              <span class="now-price">$59000</span>
+              <p>$66000</p>
+            </div>
+            <button>
+              <i class="fa fa-cart-plus add-btn" aria-hidden="true"></i>
+            </button>
+          </div>
+        </div>
+        <div class="box">
+          <img class="image" src="Img/car (4).png" alt="BMW" />
+          <h3 class="title">car №4</h3>
+          <div class="content">
+            <div class="price">
+              <span class="now-price">$88000</span>
+              <p>$76000</p>
+            </div>
+            <button>
+              <i class="fa fa-cart-plus add-btn" aria-hidden="true"></i>
+            </button>
+          </div>
+        </div>
+        <div class="box">
+          <img class="image" src="Img/car (5).png" alt="BMW" />
+          <h3 class="title">car №5</h3>
+          <div class="content">
+            <div class="price">
+              <span class="now-price">$45000</span>
+              <p>$54000</p>
+            </div>
+            <button>
+              <i class="fa fa-cart-plus add-btn" aria-hidden="true"></i>
+            </button>
+          </div>
+        </div>
+        <div class="box">
+          <img class="image" src="Img/car (6).png" alt="BMW" />
+          <h3 class="title">car №6</h3>
+          <div class="content">
+            <div class="price">
+              <span class="now-price">$87000</span>
+              <p>$100000</p>
+            </div>
+            <button>
+              <i class="fa fa-cart-plus add-btn" aria-hidden="true"></i>
+            </button>
+          </div>
+        </div>
+        <div class="box">
+          <img class="image" src="Img/car (7).png" alt="BMW" />
+          <h3 class="title">car №7</h3>
+          <div class="content">
+            <div class="price">
+              <span class="now-price">$95000</span>
+              <p>$105000</p>
+            </div>
+            <button>
+              <i class="fa fa-cart-plus add-btn" aria-hidden="true"></i>
+            </button>
+          </div>
+        </div>
+        <div class="box">
+          <img class="image" src="Img/car (8).png" alt="BMW" />
+          <h3 class="title">car №8</h3>
+          <div class="content">
+            <div class="price">
+              <span class="now-price">$75000</span>
+              <p>$83000</p>
+            </div>
+            <button>
+              <i class="fa fa-cart-plus add-btn" aria-hidden="true"></i>
+            </button>
+          </div>
+        </div>
+      </div>
+      <!-- Credit card -->
+      <div class="credit-card">
+        <i class="fa fa-times-circle" id="close-cart" aria-hidden="true"></i>
+        <h3>my<span>cart</span></h3>
+        <div class="order-link">
+          <div class="my-cart"></div>
+          <h3>total</h3>
+          <div class="total-price">$0</div>
+          <button class="buy-btn">buy now</button>
+        </div>
+      </div>
+    </section>
+    <div class="overlay hidden"></div>
+    <div class="modal hidden">
+      <div class="modal-content">
+        <h3>Thank you for your purchase</h3>
+        <br />
+        <span>We are glad you chose us</span>
+        <i class="fa fa-times-circle close-modal" aria-hidden="true"></i>
+      </div>
+    </div>
+    <script src="market.js"></script>
+  </body>
+</html>

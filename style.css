@@ -1,0 +1,239 @@
+@import url("https://fonts.googleapis.com/css2?family=Alfa+Slab+One&family=Roboto:wght@100;300;400;700&display=swap");
+
+:root {
+  --black: black;
+  --white: white;
+  --main-color: #002a49;
+  --body-bg: #00141ece;
+  --header-background: #202124b0;
+  --background-color: #e1e1e147;
+  --heading-color: #fe4363;
+  --border: 0.1rem solid #ffffff;
+}
+body {
+  overflow: hidden;
+  scroll-behavior: smooth;
+}
+* {
+  font-family: "Roboto", sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  outline: none;
+  border: none;
+  text-decoration: none;
+  transition: 0.6s linear;
+  color: var(--white);
+}
+header {
+  width: 100%;
+  height: 60px;
+  backdrop-filter: blur(10px);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 30px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 100;
+}
+.header i {
+  color: var(--white);
+  font-size: 1rem;
+  display: inline-block;
+  cursor: pointer;
+  transition: 0.3s;
+}
+.header i:hover {
+  color: var(--heading-color);
+}
+header .logo {
+  font-size: 1.5rem;
+  letter-spacing: 0.1rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  color: var(--white);
+  cursor: pointer;
+}
+header .logo span {
+  color: var(--heading-color);
+}
+.homePage {
+  position: relative;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background: url(shopPages/Img/background.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.homePage .boxOne {
+  width: 250px;
+  height: 300px;
+  position: absolute;
+  top: 100px;
+  left: 30px;
+  backdrop-filter: blur(30px);
+  box-shadow: 0 0 4px 0.5px #f6f3f3;
+  padding: 20px;
+}
+.homePage .boxTwo {
+  width: 250px;
+  height: 550px;
+  position: absolute;
+  top: 100px;
+  right: 30px;
+  backdrop-filter: blur(30px);
+  box-shadow: 0 0 4px 0.5px #f6f3f3;
+  padding: 20px;
+}
+.homePage .boxThree {
+  width: 250px;
+  height: 155px;
+  position: absolute;
+  bottom: 30px;
+  left: 30px;
+  backdrop-filter: blur(30px);
+  box-shadow: 0 0 4px 0.5px #f6f3f3;
+  padding: 20px;
+}
+.homePage .activeBoxThree {
+  height: 280px;
+}
+.homePage h3 {
+  color: var(--heading-color);
+  letter-spacing: 3px;
+  text-align: center;
+  margin-bottom: 15px;
+  font-size: 20px;
+}
+.homePage p {
+  text-align: justify;
+  font-size: 16px;
+}
+.buttonBox {
+  margin-top: 30px;
+  width: 100%;
+}
+.openMarket {
+  width: 100%;
+  height: 35px;
+  color: var(--white);
+  background: transparent;
+  text-transform: uppercase;
+  font-size: 14px;
+  font-weight: 700;
+  cursor: pointer;
+  border: var(--border);
+  box-shadow: 0 0 4px 0.5px var(--main-color);
+  letter-spacing: 0.5px;
+}
+.openCarMarket,
+.openMotorcycleMarket {
+  margin-top: 25px;
+  width: 100%;
+  height: 35px;
+  color: var(--white);
+  background: transparent;
+  text-transform: uppercase;
+  font-size: 14px;
+  font-weight: 700;
+  cursor: pointer;
+  border: var(--border);
+  /* box-shadow: 0 0 4px 0.5px var(--main-color); */
+  letter-spacing: 0.5px;
+}
+.openMarket:hover {
+  letter-spacing: 3.5px;
+  background-color: var(--background-color);
+}
+.openCarMarket:hover,
+.openMotorcycleMarket:hover {
+  letter-spacing: 2px;
+  background-color: var(--background-color);
+}
+.openMarket:focus {
+  letter-spacing: 2px;
+  background-color: var(--main-color);
+}
+.hidden {
+  display: none;
+}
+/* footer content */
+footer {
+  width: 100%;
+  height: 20px;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.footerView {
+  width: 100px;
+  height: 10px;
+  border-radius: 10px;
+  background-color: var(--header-background);
+  cursor: pointer;
+  z-index: 2;
+}
+.footerView:hover {
+  background-color: var(--main-color);
+  width: 120px;
+}
+.footerContainer {
+  width: 100%;
+  height: 100vh;
+  position: absolute;
+  left: 0;
+  bottom: -100vh;
+  backdrop-filter: blur(10px);
+}
+.activeFooter {
+  bottom: 0;
+}
+@media only screen and (max-width: 600px) {
+  .homePage .boxOne {
+    width: 46%;
+    height: auto;
+    left: 10px;
+    padding: 10px;
+  }
+  .homePage .boxTwo {
+    width: 46%;
+    height: auto;
+    right: 10px;
+    padding: 10px;
+  }
+  .homePage .boxThree {
+    width: 46%;
+    height: 110px;
+    left: 10px;
+    padding: 10px;
+  }
+  .homePage .activeBoxThree {
+    height: 210px;
+  }
+  .homePage p {
+    font-size: 11px;
+  }
+  .homePage h3 {
+    font-size: 14px;
+    letter-spacing: 1.5px;
+  }
+  .buttonBox {
+    margin-top: 0;
+  }
+  .openMarket {
+    font-size: 12px;
+  }
+  .openCarMarket,
+  .openMotorcycleMarket {
+    margin-top: 15px;
+    font-size: 12px;
+  }
+}
