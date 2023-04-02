@@ -128,8 +128,8 @@ function modalWindow() {
     overlay.classList.add("hidden");
   };
   buyBtn.addEventListener("click", openModal);
-  btnCloseModal.addEventListener("click", closeModal);
   overlay.addEventListener("click", closeModal);
+  btnCloseModal.addEventListener("click", closeModal);
 }
 
 window.onscroll = () => {

@@ -101,7 +101,7 @@
   position: fixed;
   top: 60px;
   right: -100%;
-  width: 19rem;
+  width: 18rem;
   max-height: 90%;
   padding: 1rem;
   backdrop-filter: blur(20px);
@@ -126,7 +126,7 @@
 #close-cart {
   position: absolute;
   top: 10px;
-  left: 273px;
+  left: 240px;
   font-size: 1.5rem;
   color: var(--white);
   cursor: pointer;
