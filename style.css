@@ -190,8 +190,16 @@ footer {
   height: 100vh;
   position: absolute;
   left: 0;
-  bottom: -100vh;
+  bottom: -130vh;
   backdrop-filter: blur(10px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.footerContent {
+  width: 45%;
+  height: 30%;
+  border: var(--border);
 }
 .activeFooter {
   bottom: 0;
@@ -200,13 +208,14 @@ footer {
   .homePage .boxOne {
     width: 46%;
     height: auto;
-    bottom: 40px;
+    top: 80px;
     left: 10px;
     padding: 10px;
   }
   .homePage .boxTwo {
     width: 46%;
     height: auto;
+    top: 80px;
     right: 10px;
     padding: 10px;
   }
@@ -214,6 +223,7 @@ footer {
     width: 46%;
     height: 110px;
     left: 10px;
+    bottom: 50px;
     padding: 10px;
   }
   .homePage .activeBoxThree {
