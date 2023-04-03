@@ -1,13 +1,13 @@
 const creditCard = document.getElementById("creditCard");
 const card = document.querySelector(".credit-card");
-
 const closeCart = document.getElementById("close-cart");
-const chatLink = document.querySelector(".chat-link");
-const closeChat = document.getElementById("close");
-const chatTab = document.querySelector(".chat-tab");
 const closeContent = document.getElementById("close-content");
 const creditBoxes = document.querySelector(".credit-boxes");
 const overlay = document.querySelector(".overlay");
+const modal = document.querySelector(".modal");
+const btnCloseModal = document.querySelector(".close-modal");
+const buyBtn = document.querySelector(".buy-btn");
+const loadingGif = document.querySelector(".loading-gif");
 
 creditCard.onclick = () => {
   card.classList.toggle("active");
@@ -15,14 +15,6 @@ creditCard.onclick = () => {
 closeCart.onclick = () => {
   card.classList.remove("active");
 };
-
-// chatLink.onclick = () => {
-//   chatTab.classList.add("active-chat");
-// };
-// closeChat.onclick = () => {
-//   chatTab.classList.remove("active-chat");
-// };
-modalWindow();
 addContent();
 
 function addContent() {
@@ -35,7 +27,6 @@ function addContent() {
     .getElementsByClassName("buy-btn")[0]
     .addEventListener("click", purchaseClicked);
 }
-
 function purchaseClicked() {
   let myCart = document.getElementsByClassName("my-cart")[0];
   while (myCart.hasChildNodes()) {
@@ -44,13 +35,11 @@ function purchaseClicked() {
   updateCartTotal();
   card.classList.remove("active");
 }
-
 function removeCartItem(e) {
   let buttonClicked = e.target;
   buttonClicked.parentElement.parentElement.remove();
   updateCartTotal();
 }
-
 function quantityChanged(e) {
   let input = e.target;
   if (isNaN(input.value) || input.value <= 0) {
@@ -58,7 +47,6 @@ function quantityChanged(e) {
   }
   updateCartTotal();
 }
-
 function addToCartClicked(e) {
   let button = e.target;
   let shopItem = button.parentElement.parentElement.parentElement;
@@ -69,7 +57,6 @@ function addToCartClicked(e) {
   updateCartTotal();
   card.classList.add("active");
 }
-
 function addItemToCart(title, price, imageSrc) {
   let cartRow = document.createElement("div");
   cartRow.classList.add("cart-row");
@@ -112,26 +99,26 @@ function updateCartTotal() {
     let quantity = quantityElement.value;
     total = total + price * quantity;
   }
+  if (total > 0) {
+    modalWindow();
+  }
   document.getElementsByClassName("total-price")[0].innerText = "$" + total;
 }
 function modalWindow() {
-  const modal = document.querySelector(".modal");
-  const btnCloseModal = document.querySelector(".close-modal");
-  const buyBtn = document.querySelector(".buy-btn");
-
   const openModal = function () {
-    modal.classList.remove("hidden");
     overlay.classList.remove("hidden");
+    loadingGif.classList.remove("hidden");
+    setTimeout(() => {
+      modal.classList.remove("hidden");
+      loadingGif.classList.add("hidden");
+    }, 3000);
   };
   const closeModal = function () {
     modal.classList.add("hidden");
     overlay.classList.add("hidden");
   };
+
   buyBtn.addEventListener("click", openModal);
   overlay.addEventListener("click", closeModal);
   btnCloseModal.addEventListener("click", closeModal);
 }
-
-window.onscroll = () => {
-  favorites.classList.remove("active");
-};

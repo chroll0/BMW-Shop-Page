@@ -200,6 +200,7 @@ footer {
   .homePage .boxOne {
     width: 46%;
     height: auto;
+    bottom: 40px;
     left: 10px;
     padding: 10px;
   }
