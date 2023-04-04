@@ -1,3 +1,5 @@
+document.body.style.height = window.innerHeight;
+
 const openMarket = document.querySelector(".openMarket");
 const boxThree = document.querySelector(".boxThree");
 const openCarMarket = document.querySelector(".openCarMarket");

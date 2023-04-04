@@ -1,3 +1,5 @@
+document.body.style.height = window.innerHeight;
+
 const creditCard = document.getElementById("creditCard");
 const card = document.querySelector(".credit-card");
 const closeCart = document.getElementById("close-cart");
