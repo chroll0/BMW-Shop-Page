@@ -193,13 +193,32 @@ footer {
   bottom: -130vh;
   backdrop-filter: blur(10px);
   display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
 }
 .footerContent {
-  width: 45%;
+  width: 80%;
   height: 30%;
   border: var(--border);
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  margin-top: 5%;
+}
+.footerContent img {
+  width: 40%;
+}
+.footerContent p {
+  width: 45%;
+  text-align: justify;
+  font-size: 16px;
+}
+.footerContainer h3 {
+  font-size: 18px;
+  color: var(--main-color);
+  letter-spacing: 1px;
+  text-transform: uppercase;
 }
 .activeFooter {
   bottom: 0;
@@ -223,7 +242,7 @@ footer {
     width: 46%;
     height: 110px;
     left: 10px;
-    bottom: 50px;
+    bottom: 60px;
     padding: 10px;
   }
   .homePage .activeBoxThree {
@@ -245,6 +264,13 @@ footer {
   .openCarMarket,
   .openMotorcycleMarket {
     margin-top: 15px;
+    font-size: 12px;
+  }
+  .footerContent {
+    width: 95%;
+    margin-top: 7%;
+  }
+  .footerContent p {
     font-size: 12px;
   }
 }
