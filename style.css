@@ -74,7 +74,6 @@ header .logo span {
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
-  height: -webkit-fill-available;
 }
 .homePage .boxOne {
   width: 250px;
