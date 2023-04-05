@@ -10,10 +10,14 @@
   --heading-color: #fe4363;
   --border: 0.1rem solid #ffffff;
 }
+html {
+  height: --webkit-fill-available;
+}
 body {
   height: 100vh;
   overflow: hidden;
   scroll-behavior: smooth;
+  height: --webkit-fill-available;
 }
 * {
   font-family: "Roboto", sans-serif;
